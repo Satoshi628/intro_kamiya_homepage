@@ -6,17 +6,58 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <form class="test" action="index.html" method="post">
-      <div id="form_example">
-        <label for="name">Enter your name:</label>
-        <input type="text" name="name" value="name">
+    <header>
+      <div class="title">
+        <h1>Introduction</h1>
       </div>
-      <button id="img_open_botton" type="button" name="img_open">image</button>
-      <div id="image">
-        <img src="images/test.jpg" alt="ノイズ" title="試験電波放送">
+    </header>
+
+    <!-- center -->
+    <main>
+      <div class="sentence">
+        <h1 class="subtitle" id="section_1">自己紹介</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2 class="subtitle" id="section_2">概要</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h3 class="subtitle" id="section_3">経歴</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
+    </main>
+
+    <!-- left -->
+    <aside>
+      <nav>
+        <ul id="scroll_nav">目次
+          <li> <a href="#section_1">自己紹介</a> </li>
+          <li> <a href="#section_2">概要</a> </li>
+          <li> <a href="#section_3">経歴</a> </li>
+        </ul>
+
+      </nav>
+    </aside>
+
+    <!-- right -->
+    <address>
+      <div class="user_img">
+        <img src="https://source.unsplash.com/random/150x150" alt="">
+      </div>
+      <ul class="user_info" style="list-style: none;">
+        <li>名前：<br>神谷 聡</li>
+        <li>年齢：<br>22歳</li>
+        <li>生年月日：<br>1999年6月29日</li>
+        <li>
+          所属：<br>
+          <a href="http://www1.meijo-u.ac.jp/~kazuhotta/cms_new/">名城大学堀田研究室</a></li>
+      </ul>
+    </address>
+
+    <footer>
+      <a class="goto_TOP"href="#top">TOP</a>
       
-      <script src="js/botton.js" charset="utf-8"></script>
-    </form>
+    </footer>
+
+
+    <!-- script呼び出し -->
+    <script src="js\smooth_scroll.js" charset="utf-8"></script>
   </body>
 </html>
