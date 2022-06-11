@@ -1,18 +1,155 @@
-#form_example {
-  color: rgb(43, 232, 62);
-  font-size: 60px;
+/* 基本レイアウト付与 */
+body {
+  background-color: rgb(193, 193, 193);
+  font-size: 1rem;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template:
+    "header header header header header header header" 150px
+    "...... ...... ...... ...... ...... ...... ......" 10px
+    "...... left   ...... center ...... right  ......"
+    "...... ...... ...... ...... ...... ...... ......" 50px
+    "footer footer footer footer footer footer footer" 150px
+    / auto 200px 10px 600px 10px 200px auto;
 }
 
-#img_open_botton {
-  font-size: 20px;
-  width: 100px;
-  padding: 15px;
-  box-sizing: border-box;
-  border: 3px solid rgb(232, 21, 21);
-  background: rgb(100, 80, 226);
-  cursor: pointer;
+/* 文章を含むブロックには白色を適用 */
+aside, main, address, footer{
+  background-color: rgb(255, 255, 255);
 }
 
-#image {
-  display: none;
+header {
+  /* background-image: url("D:/program/html_css/test/img/intro_banner.jpg"); */
+  background-image: url("../img/intro_banner.jpg");
+  grid-area: header;
+}
+aside {
+  grid-area: left;
+}
+main {
+  grid-area: center;
+}
+address {
+  grid-area: right;
+}
+footer {
+  grid-area: footer;
+  background-color: rgb(26, 26, 26);
+  color: white;
+}
+
+/* タイトルの見た目 */
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight:bold;
+  height: 100%;
+	text-align:center;
+	line-height:0.95em;
+	font-weight:bold;
+ 	color: white;
+	-webkit-text-stroke: 0.1em rgba(0,0,0,1);
+}
+
+/* 文章の見た目について */
+.sentence {
+  margin: 20px 20px 20px 20px;
+}
+
+.subtitle {
+  font-size: 2rem;
+}
+
+.goto_TOP {
+  color: white;
+  font-size: 1.5em;
+}
+
+/* left */
+aside nav {
+  /* スクロール追従 */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+}
+
+
+/* right */
+.user_img_field {
+  padding: 25px 25px 0 25px;
+}
+.user_img {
+  width: 150px;
+  height: 200px;
+}
+/* リストの文字パディングを初期化 */
+.user_info {
+  padding: 0 10px;
+}
+
+/* リストの間隔調節 */
+.user_info li {
+  margin-bottom: 10px
+}
+
+/* レスポンシブ対応 デスクトップファースト*/
+/*タブレット縦*/
+@media (max-width: 900px) {
+  body {
+    display: grid;
+    grid-template:
+      "header header header header header header header" 100px
+      "...... ...... ...... ...... ...... ...... ......" 10px
+      "...... left   ...... center ...... right  ......"
+      "...... ...... ...... ...... ...... ...... ......" 10px
+      "footer footer footer footer footer footer footer" 100px
+      / 10px 140px 10px auto 10px 140px 10px;
+  }
+  .user_img_field {
+    padding: 20px 20px 0 20px;
+  }
+  .user_img {
+    width: 100px;
+    height: 133px;
+  }
+  ul {
+    padding-left: 20px
+  }
+  ol {
+    padding-left: 20px
+  }
+  aside {
+    font-size: 0.8rem;
+  }
+}
+/*スマホ縦*/
+@media (max-width: 480px) {
+  body {
+    display: grid;
+    grid-template:
+      "header header header header header header header" 50px
+      "...... ...... ...... ...... ...... ...... ......" 10px
+      "...... left   ...... center ...... right  ......"
+      "...... ...... ...... ...... ...... ...... ......" 10px
+      "footer footer footer footer footer footer footer" 50px
+      / 10px 100px 10px auto 10px 100px 10px;
+  }
+  .user_img_field {
+    padding: 10px 10px 0 10px;
+  }
+  .user_img {
+    width: 80px;
+    height: 106px;
+  }
+  ul {
+    padding-left: 20px
+  }
+  ol {
+    padding-left: 20px
+  }
+  aside, main, address, footer, .subtitle {
+    font-size: 0.6rem;
+  }
 }

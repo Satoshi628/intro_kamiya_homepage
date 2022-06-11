@@ -2,21 +2,105 @@
 <html lang="ja" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test html</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <form class="test" action="index.html" method="post">
-      <div id="form_example">
-        <label for="name">Enter your name:</label>
-        <input type="text" name="name" value="name">
+    <header>
+      <div class="title">
+        <h1>Introduction</h1>
       </div>
-      <button id="img_open_botton" type="button" name="img_open">image</button>
-      <div id="image">
-        <img src="images/test.jpg" alt="ノイズ" title="試験電波放送">
+    </header>
+
+    <!-- center -->
+    <main>
+      <div class="sentence">
+        <h1 class="subtitle" id="section_1">経歴/Career</h1>
+        <p>
+          <ul>
+            <li>2022/4 ~ 現在 名城大学理工学研究科 修士</li>
+            <li>2018/4 ~ 2022/3 名城大学理工学部電気電子工学科　学士</li>
+            <li>2015/4 ~ 2018/3 私立名古屋経済大学市邨高等学校 普通科</li>
+          </ul>
+
+          <ul>
+            <li>2022/4 ~ current Department of Electrical and Electronic Engineering, Graduate School of Science and
+              Engineering, Meijo University. Master of Engineering.</li>
+            <li>2018/4 ~ 2022/3 Department of Electrical and Electronic Engineering, Faculty of Engineering, Meijo University.
+              Bachelor of Engineering.</li>
+            <li>2015/4 ~ 2018/3 General Course, Nagoya Keizai University Ichimura private high school.</li>
+          </ul>
+        </p>
+        <h2 class="subtitle" id="section_2">研究内容/research</h2>
+        <p>
+          <font size="4">Multi Object Tracking</font><br>
+          <ul>
+            <li>2022/4 ~ 現在 名城大学理工学研究科 修士</li>
+            <li>2018/4 ~ 2022/3 名城大学理工学部電気電子工学科　学士</li>
+            <li>2015/4 ~ 2018/3 私立名古屋経済大学市邨高等学校 普通科</li>
+          </ul>
+        </p>
+        <h3 class="subtitle" id="section_3">論文/Publications</h3>
+        <p>
+          <ol>
+            <li>神谷聡, 角山貴昭，楠見明弘，堀田一弘, “<a href="https://www.ieice.org/ken/program/index.php?tgs_regid=95b451d11427e27186418e91709cee2714244f47591a2aead3aa88bc0377e238&tgid=IEICE-PRMU"> Graph TransformerによるSingle-Particle Tracking</a>”, 情報処理学会CVIM研究会 卒論セッション(CVIM2022), May 2022.</li>
+            <li>神谷聡, 堀田一弘, “<a href="https://confit.atlas.jp/guide/event/ssii2022/subject/IS1-10/category?cryptoId="> Boundary IoU lossによる医療画像のSemantic Segmentation</a>”, 第28回 画像センシングシンポジウム (SSII2022), june 2022.</li>
+            <li>山田真司, 神谷聡, 堀田一弘, “<a href="https://confit.atlas.jp/guide/event/ssii2022/subject/IS2-20/category?cryptoId="> 再構成機能を有した生徒-教師ピラミッドマッチングと識別ネットワークを用いた外観検査</a>”, 第28回 画像センシングシンポジウム (SSII2022), june 2022.</li>
+            <li>神谷聡, 角山貴昭，楠見明弘，堀田一弘, “Graph Transformerによるたんぱく質分子のMultiple Object Tracking”, 画像の認識・理解シンポジウム(MIRU2022)，July 2022.</li>
+            <li>村瀬萌花, 神谷聡，堀田一弘, “画素間の関係を用いた少数の教師付き画像によるセグメンテーション”, 画像の認識・理解シンポジウム(MIRU2022)，July 2022.</li>
+          </ol>
+        </p>
+        <h4 class="subtitle" id="section_4">受賞/Awards</h4>
+        <p>
+          <ol>
+            <li>IEEE Nagoya Section Excellent student Award, May 2022.<br>
+              受賞テーマ：Graph Transformerによるたんぱく質分子のMultiple Object Tracking
+              </li>
+          </ol>
+        </p>
       </div>
-      
-      <script src="js/botton.js" charset="utf-8"></script>
-    </form>
+    </main>
+
+    <!-- left -->
+    <aside>
+      <nav>
+        <ul id="scroll_nav">目次
+          <li> <a href="#section_1">経歴/Career</a> </li>
+          <li> <a href="#section_2">研究内容/research</a> </li>
+          <li> <a href="#section_3">論文/Publications</a> </li>
+          <li> <a href="#section_4">受賞/Awards</a> </li>
+        </ul>
+
+      </nav>
+    </aside>
+
+    <!-- right -->
+    <address>
+      <div class="user_img_field">
+        <img class="user_img" src=".\img\kamiya_satoshi.jpg" alt="" title="神谷 聡">
+
+      </div>
+      <ul class="user_info" style="list-style: none;">
+        <li>名前：<br>神谷 聡</li>
+        <li>出身：<br>愛知県</li>
+        <li>
+          所属：<br>
+          名城大学　理工学研究科<br>
+          <a href="http://www1.meijo-u.ac.jp/~kazuhotta/cms_new/">名城大学堀田研究室</a></li>
+        <li>研究分野：<br>コンピュータビジョン<br>深層学習</li>
+      </ul>
+    </address>
+
+    <footer>
+      <center>
+        <a class="goto_TOP" href="#top">TOP</a>
+      </center>
+
+    </footer>
+
+
+    <!-- script呼び出し -->
+    <script src="js\smooth_scroll.js" charset="utf-8"></script>
   </body>
 </html>
