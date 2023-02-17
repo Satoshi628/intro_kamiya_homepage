@@ -22,6 +22,7 @@ aside, main, address, footer{
 header {
   /* background-image: url("D:/program/html_css/test/img/intro_banner.jpg"); */
   background-image: url("../img/intro_banner.jpg");
+  background-size: cover;
   grid-area: header;
 }
 aside {
@@ -39,6 +40,11 @@ footer {
   color: white;
 }
 
+/* 研究画像のスタイル */
+.research-img {
+  text-align: right;
+}
+
 /* タイトルの見た目 */
 .title {
   display: flex;
@@ -49,7 +55,7 @@ footer {
 	text-align:center;
 	line-height:0.95em;
 	font-weight:bold;
- 	color: white;
+  color: white;
 	-webkit-text-stroke: 0.1em rgba(0,0,0,1);
 }
 
